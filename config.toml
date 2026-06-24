@@ -1,0 +1,32 @@
+# Solve Engine tunables (non-secret, version-controlled).
+# Secrets (GITHUB_TOKEN, DATABASE_URL) live in .env, never here.
+
+# Primary language(s) we triage for.
+language_focus = ["python"]
+
+# Data / SQL ecosystem tags used to bias issue selection toward data tooling.
+data_tags = ["dbt", "duckdb", "pandas", "sql"]
+
+# Recognizable, active Python/data repos to pull issues from, so demos and PRs
+# land in names people know. (Venura will edit this.)
+watchlist = [
+    "dbt-labs/dbt-core",
+    "duckdb/duckdb",
+    "pandas-dev/pandas",
+    "pola-rs/polars",
+    "sqlalchemy/sqlalchemy",
+    "apache/airflow",
+    "dagster-io/dagster",
+    "PrefectHQ/prefect",
+    "great-expectations/great_expectations",
+    "scikit-learn/scikit-learn",
+]
+
+[thresholds]
+# Minimum solvability score (0.0-1.0) an issue needs to enter the workable queue.
+# Higher = stricter; only issues we're fairly confident are tractable show up.
+solvability_min = 0.6
+
+# Minimum skill-fit score (0.0-1.0) for an issue to be recommended to the user.
+# Higher = only issues well-matched to the user's stated skills are surfaced.
+skill_fit_min = 0.5

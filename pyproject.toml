@@ -8,7 +8,11 @@ version = "0.0.1"
 description = "Ticket-triage trainer over live GitHub issues."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pydantic>=2",
+    "psycopg[binary]>=3",
+    "python-dotenv",
+]
 
 [project.optional-dependencies]
 dev = [

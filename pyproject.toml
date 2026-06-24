@@ -12,6 +12,7 @@ dependencies = [
     "pydantic>=2",
     "psycopg[binary]>=3",
     "python-dotenv",
+    "httpx",
 ]
 
 [project.optional-dependencies]

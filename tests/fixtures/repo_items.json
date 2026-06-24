@@ -1,0 +1,38 @@
+[
+  {
+    "repository_url": "https://api.github.com/repos/duckdb/duckdb",
+    "number": 200,
+    "title": "Issue C: appears in both sources",
+    "state": "open",
+    "html_url": "https://github.com/duckdb/duckdb/issues/200"
+  },
+  {
+    "repository_url": "https://api.github.com/repos/duckdb/duckdb",
+    "number": 201,
+    "title": "Issue D: watchlist only",
+    "state": "open",
+    "html_url": "https://github.com/duckdb/duckdb/issues/201"
+  },
+  {
+    "repository_url": "https://api.github.com/repos/duckdb/duckdb",
+    "number": 999,
+    "title": "PR one: should be filtered",
+    "state": "open",
+    "html_url": "https://github.com/duckdb/duckdb/pull/999",
+    "pull_request": {
+      "url": "https://api.github.com/repos/duckdb/duckdb/pulls/999",
+      "html_url": "https://github.com/duckdb/duckdb/pull/999"
+    }
+  },
+  {
+    "repository_url": "https://api.github.com/repos/pandas-dev/pandas",
+    "number": 888,
+    "title": "PR two: should be filtered",
+    "state": "open",
+    "html_url": "https://github.com/pandas-dev/pandas/pull/888",
+    "pull_request": {
+      "url": "https://api.github.com/repos/pandas-dev/pandas/pulls/888",
+      "html_url": "https://github.com/pandas-dev/pandas/pull/888"
+    }
+  }
+]

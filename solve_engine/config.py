@@ -28,6 +28,15 @@ class Thresholds(BaseModel):
     skill_fit_min: float
 
 
+class SearchConfig(BaseModel):
+    """Tunables for the GitHub Search-API ingestion."""
+
+    labels: list[str]
+    recency_days: int
+    max_results: int
+    per_page: int = 100
+
+
 class Settings(BaseModel):
     """Resolved configuration for the whole engine."""
 
@@ -39,6 +48,7 @@ class Settings(BaseModel):
     language_focus: list[str]
     data_tags: list[str]
     watchlist: list[str]
+    search: SearchConfig
     thresholds: Thresholds
 
 
@@ -72,5 +82,6 @@ def get_settings() -> Settings:
         language_focus=list(data.get("language_focus", [])),
         data_tags=list(data.get("data_tags", [])),
         watchlist=list(data.get("watchlist", [])),
+        search=SearchConfig(**data.get("search", {})),
         thresholds=Thresholds(**data.get("thresholds", {})),
     )

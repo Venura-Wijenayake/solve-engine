@@ -20,3 +20,6 @@ htmlcov/
 # Environments
 .venv/
 .env
+
+# HTTP response cache (ETag/body for conditional requests)
+.cache/

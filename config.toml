@@ -22,6 +22,19 @@ watchlist = [
     "scikit-learn/scikit-learn",
 ]
 
+[search]
+# Issue labels to target. Each label becomes its own search query and the
+# results are OR'd together (a single GitHub query ANDs multiple labels, which
+# is too strict). Tunable.
+labels = ["good first issue", "help wanted", "bug"]
+# Only consider issues created within this many days (recency window). Tunable.
+recency_days = 180
+# Stop after this many search results across all label queries. GitHub's Search
+# API hard-caps any single query at 1000 results regardless.
+max_results = 300
+# Results per page (GitHub maximum is 100).
+per_page = 100
+
 [thresholds]
 # Minimum solvability score (0.0-1.0) an issue needs to enter the workable queue.
 # Higher = stricter; only issues we're fairly confident are tractable show up.

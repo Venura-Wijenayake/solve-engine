@@ -13,6 +13,7 @@ dependencies = [
     "psycopg[binary]>=3",
     "python-dotenv",
     "httpx",
+    "streamlit",
 ]
 
 [project.optional-dependencies]
@@ -30,6 +31,12 @@ line-length = 100
 
 [tool.mypy]
 strict = true
+
+# Third-party UI libraries that ship no type stubs. This only tells mypy these
+# external packages are untyped; it does not relax strictness on our own code.
+[[tool.mypy.overrides]]
+module = ["streamlit", "streamlit.*"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

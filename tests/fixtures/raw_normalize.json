@@ -1,0 +1,53 @@
+[
+  {
+    "repository_url": "https://api.github.com/repos/pandas-dev/pandas",
+    "number": 100,
+    "title": "  groupby regression on multiindex  ",
+    "body": "Steps to reproduce ...",
+    "html_url": "https://github.com/pandas-dev/pandas/issues/100",
+    "state": "open",
+    "labels": [
+      {"id": 1, "name": "good first issue", "color": "7057ff"},
+      {"id": 2, "name": "bug", "color": "d73a4a"}
+    ],
+    "created_at": "2026-06-01T10:00:00Z",
+    "updated_at": "2026-06-10T12:30:00Z",
+    "_source": "search"
+  },
+  {
+    "repository_url": "https://api.github.com/repos/duckdb/duckdb",
+    "number": 200,
+    "title": "Crash on large parquet scan",
+    "body": "",
+    "html_url": "https://github.com/duckdb/duckdb/issues/200",
+    "state": "open",
+    "labels": [{"id": 3, "name": "help wanted", "color": "008672"}],
+    "created_at": "2026-05-20T08:00:00Z",
+    "updated_at": "2026-05-21T09:00:00Z",
+    "_source": "watchlist"
+  },
+  {
+    "repository_url": "https://api.github.com/repos/duckdb/duckdb",
+    "number": 201,
+    "title": "",
+    "body": "Has a body but no title -> drop",
+    "html_url": "https://github.com/duckdb/duckdb/issues/201",
+    "state": "open",
+    "labels": [],
+    "created_at": "2026-05-20T08:00:00Z",
+    "updated_at": "2026-05-21T09:00:00Z",
+    "_source": "search"
+  },
+  {
+    "repository_url": "https://api.github.com/repos/duckdb/duckdb",
+    "number": 202,
+    "title": "Empty body and no labels -> drop",
+    "body": "   ",
+    "html_url": "https://github.com/duckdb/duckdb/issues/202",
+    "state": "open",
+    "labels": [],
+    "created_at": "2026-05-20T08:00:00Z",
+    "updated_at": "2026-05-21T09:00:00Z",
+    "_source": "search"
+  }
+]

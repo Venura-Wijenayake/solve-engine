@@ -6,12 +6,12 @@ that records prompts and returns canned content or raises canned errors.
 
 from __future__ import annotations
 
-from solve_engine.classify.classifier import (
+from triagent.classify.classifier import (
     Classification,
     build_prompt,
     parse_classification,
 )
-from solve_engine.classify.llm import invoke
+from triagent.classify.llm import invoke
 
 CLEAN = '{"type": "bug", "difficulty": "easy", "solvability": 0.8, ' '"skill_fit": 0.6, "rationale": "clear repro"}'
 

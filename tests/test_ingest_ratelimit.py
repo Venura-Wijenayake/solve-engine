@@ -1,4 +1,4 @@
-from solve_engine.ingest.ratelimit import RateLimitGuard
+from triagent.ingest.ratelimit import RateLimitGuard
 
 
 class FakeClock:

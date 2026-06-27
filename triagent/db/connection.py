@@ -8,7 +8,7 @@ from typing import Any
 
 import psycopg
 
-from solve_engine.config import get_settings
+from triagent.config import get_settings
 
 
 @contextmanager

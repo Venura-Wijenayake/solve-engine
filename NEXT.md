@@ -1,4 +1,4 @@
-# Solve Engine — session pickup
+# Triagent — session pickup
 
 ## Where things stand (5 phases done)
 - P0 Foundation, P1 Ingestion, P2 Scoring, P3 Evaluation, P4 Agent — all merged to main.
@@ -8,15 +8,15 @@
 
 ## First moves next session
 1. Re-run live scoring once Gemini daily quota has reset:
-   - `python -m solve_engine.score.run --sleep 4`        (fills the v1 backlog, ~625 unscored)
-   - `python -m solve_engine.agent.run --limit 5`        (live agent-v1 scores; was quota-blocked last session)
+   - `python -m triagent.score.run --sleep 4`        (fills the v1 backlog, ~625 unscored)
+   - `python -m triagent.agent.run --limit 5`        (live agent-v1 scores; was quota-blocked last session)
 2. Then start P5 — Serve & Ship: FastAPI read layer + a real ticket-queue UI + a managed deploy (live URL, not localhost), with the Oracle Cloud migration as the hardening step.
 
 ## Useful commands
-- Ingest more issues:   `python -m solve_engine.ingest.run`
-- See the board:        `streamlit run solve_engine/board/app.py`
-- Run the eval:         `python -m solve_engine.eval.run_eval`
-- Agent setup (once):   `python -m solve_engine.agent.setup`
+- Ingest more issues:   `python -m triagent.ingest.run`
+- See the board:        `streamlit run triagent/board/app.py`
+- Run the eval:         `python -m triagent.eval.run_eval`
+- Agent setup (once):   `python -m triagent.agent.setup`
 
 ## Notes / known things
 - Gemini free tier has a tiny daily quota — scoring runs in bursts across days; both runners stop gracefully and resume.

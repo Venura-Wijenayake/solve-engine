@@ -1,6 +1,6 @@
 """End-to-end ingest: fetch (live) -> normalize -> upsert, recorded in `run`.
 
-    python -m solve_engine.ingest.run
+    python -m triagent.ingest.run
 
 Pulls a small live batch, normalizes it onto the Issue model, upserts into
 Postgres, writes one row to the `run` table, and prints a summary.
@@ -11,11 +11,11 @@ from __future__ import annotations
 import io
 import sys
 
-from solve_engine.config import get_settings
-from solve_engine.db.connection import get_connection
-from solve_engine.ingest.github_client import GitHubClient
-from solve_engine.ingest.normalize import normalize_issues
-from solve_engine.ingest.store import finish_run, issue_count, start_run, upsert_issues
+from triagent.config import get_settings
+from triagent.db.connection import get_connection
+from triagent.ingest.github_client import GitHubClient
+from triagent.ingest.normalize import normalize_issues
+from triagent.ingest.store import finish_run, issue_count, start_run, upsert_issues
 
 # Keep the live pull modest.
 SEARCH_MAX_RESULTS = 60
@@ -55,7 +55,7 @@ def main() -> None:
         )
         total = issue_count(conn)
 
-    print("=== solve-engine ingest run ===")
+    print("=== triagent ingest run ===")
     print(f"pulled (raw)   : {len(raws)}")
     print(f"normalized     : {len(issues)}")
     print(f"new            : {new}")

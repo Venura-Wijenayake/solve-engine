@@ -1,5 +1,5 @@
--- 0001_init: core domain tables for Solve Engine.
--- Mirrors solve_engine/models.py. Raw SQL, applied by solve_engine.db.migrate.
+-- 0001_init: core domain tables for Triagent.
+-- Mirrors triagent/models.py. Raw SQL, applied by triagent.db.migrate.
 
 -- A GitHub issue. Primary key is the natural "repo#number" key so foreign keys
 -- elsewhere stay single-column. Pull requests are filtered at ingest and never

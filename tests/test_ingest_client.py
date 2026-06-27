@@ -2,8 +2,8 @@ from pathlib import Path
 
 import httpx
 
-from solve_engine.ingest.cache import ResponseCache
-from solve_engine.ingest.github_client import GitHubClient
+from triagent.ingest.cache import ResponseCache
+from triagent.ingest.github_client import GitHubClient
 
 
 def _client(tmp_path: Path, handler: httpx.MockTransport) -> GitHubClient:

@@ -13,7 +13,7 @@ from typing import Any
 import psycopg
 from psycopg.types.json import Jsonb
 
-from solve_engine.models import Issue
+from triagent.models import Issue
 
 _UPSERT_SQL = """
 INSERT INTO issue (

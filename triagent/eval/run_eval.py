@@ -1,6 +1,6 @@
 """Evaluation harness: score the LLM's predictions against the human golden set.
 
-    python -m solve_engine.eval.run_eval
+    python -m triagent.eval.run_eval
 
 Reads ``golden.jsonl`` (human ground truth), joins each filled row to that
 issue's latest v1 score FROM THE DB (predictions never live in the golden file),
@@ -29,9 +29,9 @@ from sklearn.metrics import (
     confusion_matrix,
 )
 
-from solve_engine.classify.classifier import PROMPT_VERSION
-from solve_engine.db.connection import get_connection
-from solve_engine.eval.golden import (
+from triagent.classify.classifier import PROMPT_VERSION
+from triagent.db.connection import get_connection
+from triagent.eval.golden import (
     SOLVABILITY_THRESHOLD,
     EvalPairs,
     GoldenRow,
@@ -115,7 +115,7 @@ def main(argv: Any = None) -> None:
     predictions = load_predictions(PROMPT_VERSION)
     pairs = pair_with_predictions(rows, predictions.get)
 
-    print("=== solve-engine evaluation ===")
+    print("=== triagent evaluation ===")
     print(f"golden file   : {GOLDEN_PATH}")
     print(f"golden rows   : {len(rows)} total")
 

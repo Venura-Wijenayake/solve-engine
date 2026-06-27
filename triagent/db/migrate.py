@@ -4,7 +4,7 @@ Each ``NNNN_*.sql`` file is applied inside its own transaction and recorded in a
 ``schema_migrations`` table. Already-applied files are skipped, so the runner is
 idempotent and re-runnable:
 
-    python -m solve_engine.db.migrate
+    python -m triagent.db.migrate
 """
 
 from __future__ import annotations
@@ -14,7 +14,7 @@ from typing import Any
 
 import psycopg
 
-from solve_engine.db.connection import get_connection
+from triagent.db.connection import get_connection
 
 MIGRATIONS_DIR = Path(__file__).resolve().parent / "migrations"
 

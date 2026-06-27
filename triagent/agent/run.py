@@ -1,6 +1,6 @@
 """End-to-end agent pass: run the triage graph per issue, persist agent scores.
 
-    python -m solve_engine.agent.run [--limit N] [--sleep S]
+    python -m triagent.agent.run [--limit N] [--sleep S]
 
 Selects issues with no score at prompt_version "agent-v1" (so agent scores are
 distinguishable from the v1 single-call scores), runs the compiled Triage->Verify
@@ -21,14 +21,14 @@ from typing import Any, Callable, cast
 
 from langgraph.checkpoint.postgres import PostgresSaver
 
-from solve_engine.agent.graph import AGENT_PROMPT_VERSION, AgentState, InvokeFn, build_graph
-from solve_engine.classify.classifier import _coerce_difficulty, _coerce_type
-from solve_engine.classify.llm import _chat, invoke, model_version
-from solve_engine.config import get_settings
-from solve_engine.db.connection import get_connection
-from solve_engine.ingest.store import finish_run, start_run
-from solve_engine.models import Score
-from solve_engine.score.store import count_unscored, insert_score, select_unscored
+from triagent.agent.graph import AGENT_PROMPT_VERSION, AgentState, InvokeFn, build_graph
+from triagent.classify.classifier import _coerce_difficulty, _coerce_type
+from triagent.classify.llm import _chat, invoke, model_version
+from triagent.config import get_settings
+from triagent.db.connection import get_connection
+from triagent.ingest.store import finish_run, start_run
+from triagent.models import Score
+from triagent.score.store import count_unscored, insert_score, select_unscored
 
 DEFAULT_LIMIT = 5
 DEFAULT_SLEEP = 4.0
@@ -154,7 +154,7 @@ def _print_summary(
     stop_reason: str | None,
     samples: list[tuple[str, AgentState]],
 ) -> None:
-    print("\n=== solve-engine agent run ===")
+    print("\n=== triagent agent run ===")
     print(f"scored (new)   : {new}")
     print(f"still unscored : {remaining}")
     print(f"run id         : {run_id}")

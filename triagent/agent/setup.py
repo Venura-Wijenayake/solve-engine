@@ -1,6 +1,6 @@
 """Create the LangGraph Postgres checkpointer tables (idempotent).
 
-    python -m solve_engine.agent.setup
+    python -m triagent.agent.setup
 
 PostgresSaver.setup() creates its own tables (checkpoints, checkpoint_blobs,
 checkpoint_writes, checkpoint_migrations) used to persist graph state. Safe to
@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from langgraph.checkpoint.postgres import PostgresSaver
 
-from solve_engine.config import get_settings
+from triagent.config import get_settings
 
 
 def main() -> None:

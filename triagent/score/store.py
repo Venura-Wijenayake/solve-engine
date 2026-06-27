@@ -10,7 +10,7 @@ from typing import Any
 
 import psycopg
 
-from solve_engine.models import Score
+from triagent.models import Score
 
 # Issues with no score row at the given prompt_version. Mirrors the anti-join
 # the score_issue_key_idx supports; ORDER BY keeps re-runs deterministic.

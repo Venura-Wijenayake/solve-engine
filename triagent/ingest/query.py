@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import date, timedelta
 from typing import Any
 
-from solve_engine.config import Settings
+from triagent.config import Settings
 
 # Provenance is recorded under this key on each returned raw dict. Namespaced to
 # avoid colliding with any real GitHub field.

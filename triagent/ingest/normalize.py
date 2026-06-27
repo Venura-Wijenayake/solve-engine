@@ -11,8 +11,8 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any
 
-from solve_engine.ingest.query import SOURCE_KEY, issue_key
-from solve_engine.models import Issue
+from triagent.ingest.query import SOURCE_KEY, issue_key
+from triagent.models import Issue
 
 
 def _utcnow() -> datetime:

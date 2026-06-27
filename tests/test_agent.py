@@ -13,8 +13,8 @@ import os
 import pytest
 from langgraph.checkpoint.memory import MemorySaver
 
-import solve_engine.agent.run as agent_run
-from solve_engine.agent.graph import (
+import triagent.agent.run as agent_run
+from triagent.agent.graph import (
     VERIFY_THRESHOLD,
     AgentState,
     VerifyResult,
@@ -23,7 +23,7 @@ from solve_engine.agent.graph import (
     parse_verify,
     should_verify,
 )
-from solve_engine.classify.llm import InvokeOutcome
+from triagent.classify.llm import InvokeOutcome
 
 
 def _triage_json(*, solvability: float, issue_type: str = "bug", difficulty: str = "medium") -> str:

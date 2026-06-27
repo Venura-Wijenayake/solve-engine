@@ -1,6 +1,6 @@
 import pytest
 
-import solve_engine.config as config
+import triagent.config as config
 
 
 def test_get_settings_loads(monkeypatch: pytest.MonkeyPatch) -> None:

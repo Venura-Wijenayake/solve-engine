@@ -1,4 +1,4 @@
-# Solve Engine tunables (non-secret, version-controlled).
+# Triagent tunables (non-secret, version-controlled).
 # Secrets (GITHUB_TOKEN, DATABASE_URL) live in .env, never here.
 
 # Primary language(s) we triage for.

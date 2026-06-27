@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from solve_engine.models import Issue, Run, Score, SolveLog
+from triagent.models import Issue, Run, Score, SolveLog
 
 _NOW = datetime(2026, 6, 24, 12, 0, tzinfo=timezone.utc)
 

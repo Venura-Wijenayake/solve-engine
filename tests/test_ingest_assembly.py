@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from solve_engine.ingest.query import SOURCE_KEY, is_pull_request, merge_and_dedupe
+from triagent.ingest.query import SOURCE_KEY, is_pull_request, merge_and_dedupe
 
 FIXTURES = Path(__file__).parent / "fixtures"
 

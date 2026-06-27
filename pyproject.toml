@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "solve-engine"
+name = "triagent"
 version = "0.0.1"
 description = "Ticket-triage trainer over live GitHub issues."
 readme = "README.md"
@@ -32,7 +32,7 @@ eval = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["solve_engine"]
+packages = ["triagent"]
 
 [tool.ruff]
 line-length = 100

@@ -1,4 +1,4 @@
-# Solve Engine - GOLDEN SET (human ground truth for evaluation)
+# Triagent - GOLDEN SET (human ground truth for evaluation)
 #
 # Fill each row BY HAND using YOUR OWN judgment after reading the issue.
 # NEVER copy the model's prediction. The harness joins model predictions from the

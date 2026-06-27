@@ -1,5 +1,5 @@
-import solve_engine
+import triagent
 
 
 def test_version() -> None:
-    assert solve_engine.__version__ == "0.0.1"
+    assert triagent.__version__ == "0.0.1"

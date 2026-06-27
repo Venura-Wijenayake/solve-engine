@@ -22,7 +22,7 @@ from typing import Any, Callable, Literal, TypedDict
 from langgraph.graph import END, START, StateGraph
 from pydantic import BaseModel
 
-from solve_engine.classify.classifier import (
+from triagent.classify.classifier import (
     _coerce_difficulty,
     _coerce_type,
     _extract_json_object,
@@ -30,8 +30,8 @@ from solve_engine.classify.classifier import (
     fallback,
     parse_classification,
 )
-from solve_engine.classify.llm import InvokeOutcome
-from solve_engine.models import Difficulty, IssueType
+from triagent.classify.llm import InvokeOutcome
+from triagent.models import Difficulty, IssueType
 
 # Run verify only when triage solvability is below this — the "uncertain" band.
 VERIFY_THRESHOLD = 0.5

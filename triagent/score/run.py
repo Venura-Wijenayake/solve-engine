@@ -1,6 +1,6 @@
 """End-to-end scoring pass: classify unscored issues, persist Scores, record a run.
 
-    python -m solve_engine.score.run [--limit N] [--max N] [--sleep S] \
+    python -m triagent.score.run [--limit N] [--max N] [--sleep S] \
         [--cooldown S] [--no-continue-on-limit]
 
 Selects issues with no score at prompt_version "v1", asks the LLM to classify
@@ -26,18 +26,18 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Callable
 
-from solve_engine.classify.classifier import (
+from triagent.classify.classifier import (
     PROMPT_VERSION,
     Classification,
     build_prompt,
     parse_classification,
 )
-from solve_engine.classify.llm import InvokeOutcome, _chat, invoke, model_version
-from solve_engine.config import get_settings
-from solve_engine.db.connection import get_connection
-from solve_engine.ingest.store import finish_run, start_run
-from solve_engine.models import Score
-from solve_engine.score.store import count_unscored, insert_score, select_unscored
+from triagent.classify.llm import InvokeOutcome, _chat, invoke, model_version
+from triagent.config import get_settings
+from triagent.db.connection import get_connection
+from triagent.ingest.store import finish_run, start_run
+from triagent.models import Score
+from triagent.score.store import count_unscored, insert_score, select_unscored
 
 DEFAULT_LIMIT = 25  # DB fetch page size (inner batch)
 DEFAULT_SLEEP = 4.0  # seconds between successful calls (~15/min, under typical limits)
@@ -238,7 +238,7 @@ def main(argv: list[str] | None = None) -> None:
 
 
 def _print_summary(run_id: int, result: PassResult, remaining: int) -> None:
-    print("\n=== solve-engine scoring run ===")
+    print("\n=== triagent scoring run ===")
     print(f"scored (new)   : {result.new}")
     print(f"still unscored : {remaining}")
     print(f"run id         : {run_id}")

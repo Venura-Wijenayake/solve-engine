@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from solve_engine.ingest.normalize import normalize_issue, normalize_issues
+from triagent.ingest.normalize import normalize_issue, normalize_issues
 
 FIXTURES = Path(__file__).parent / "fixtures"
 _NOW = datetime(2026, 6, 24, 12, 0, tzinfo=timezone.utc)

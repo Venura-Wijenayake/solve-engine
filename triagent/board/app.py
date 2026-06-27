@@ -1,6 +1,6 @@
 """Minimal Streamlit board: browse the scored issue queue.
 
-    streamlit run solve_engine/board/app.py
+    streamlit run triagent/board/app.py
 
 Each issue is LEFT JOINed to its latest score, so the queue sorts "most
 solvable first" instead of a flat dump. Unscored issues still appear (with
@@ -14,7 +14,7 @@ from typing import Any
 
 import streamlit as st
 
-from solve_engine.db.connection import get_connection
+from triagent.db.connection import get_connection
 
 _COLUMNS = [
     "repo",
@@ -56,12 +56,12 @@ def load_issues() -> list[dict[str, Any]]:
 
 
 def _render() -> None:
-    st.set_page_config(page_title="Solve Engine — Board", layout="wide")
-    st.title("Solve Engine — Ticket Queue")
+    st.set_page_config(page_title="Triagent — Board", layout="wide")
+    st.title("Triagent — Ticket Queue")
 
     issues = load_issues()
     if not issues:
-        st.info("No issues stored yet. Run `python -m solve_engine.ingest.run` first.")
+        st.info("No issues stored yet. Run `python -m triagent.ingest.run` first.")
         return
 
     repos = sorted({row["repo"] for row in issues})

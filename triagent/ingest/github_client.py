@@ -15,14 +15,14 @@ from typing import Any, Callable, cast
 
 import httpx
 
-from solve_engine.config import Settings, get_settings
-from solve_engine.ingest.cache import ResponseCache, cache_key
-from solve_engine.ingest.query import build_search_queries, merge_and_dedupe
-from solve_engine.ingest.ratelimit import RateLimitBudget, RateLimitGuard, RateLimits
+from triagent.config import Settings, get_settings
+from triagent.ingest.cache import ResponseCache, cache_key
+from triagent.ingest.query import build_search_queries, merge_and_dedupe
+from triagent.ingest.ratelimit import RateLimitBudget, RateLimitGuard, RateLimits
 
 API_ROOT = "https://api.github.com"
 API_VERSION = "2022-11-28"
-USER_AGENT = "solve-engine"
+USER_AGENT = "triagent"
 # GitHub's Search API never returns more than 1000 results for one query.
 SEARCH_RESULT_CAP = 1000
 

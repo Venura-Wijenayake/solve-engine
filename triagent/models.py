@@ -1,6 +1,6 @@
 """Domain models — the typed contract everything downstream reads and writes.
 
-Four entities mirror the Postgres tables in ``solve_engine/db/migrations``:
+Four entities mirror the Postgres tables in ``triagent/db/migrations``:
 
 * ``Issue``    — a GitHub issue we've ingested (identity = ``repo#number``).
 * ``Score``    — one scoring of an issue (solvability / skill-fit / difficulty).

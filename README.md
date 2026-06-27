@@ -1,6 +1,6 @@
-# Solve Engine
+# Triagent
 
-Solve Engine is a ticket-triage trainer built on top of live GitHub issues. It pulls real, open
+Triagent is a ticket-triage trainer built on top of live GitHub issues. It pulls real, open
 issues from public repositories, scores them for solvability and difficulty, and presents them as a
 workable ticket queue so you can practice triaging and solving real-world work instead of toy
 problems. This repository currently contains the project skeleton; ingestion, scoring, and the
@@ -28,7 +28,7 @@ The structure below is the intended end state. Most directories do not exist yet
 its own phase. The phase tag (`[P#]`) marks when a part comes online.
 
 ```
-solve_engine/
+triagent/
   config.py      # env secrets + config.toml tunables
   models.py      # Pydantic models: Issue, Score, Run, SolveLog
   db/            # connection helper + migration runner

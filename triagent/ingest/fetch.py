@@ -1,6 +1,6 @@
 """Live proof: a small GitHub pull that prints a summary and writes nothing.
 
-    python -m solve_engine.ingest.fetch
+    python -m triagent.ingest.fetch
 
 Caps the pull low (a page or two) so it stays well inside the rate limit. Run it
 twice to see the cache work: the second run serves 304s and consumes far less
@@ -12,9 +12,9 @@ from __future__ import annotations
 import io
 import sys
 
-from solve_engine.config import get_settings
-from solve_engine.ingest.github_client import GitHubClient
-from solve_engine.ingest.query import (
+from triagent.config import get_settings
+from triagent.ingest.github_client import GitHubClient
+from triagent.ingest.query import (
     SOURCE_KEY,
     build_search_queries,
     is_pull_request,
@@ -65,7 +65,7 @@ def main() -> None:
     for item in merged:
         by_source[item[SOURCE_KEY]] += 1
 
-    print("=== solve-engine live fetch (no DB writes) ===")
+    print("=== triagent live fetch (no DB writes) ===")
     print(f"raw items pulled : {raw_total} (search={len(search_items)}, "
           f"watchlist={len(watch_items)})")
     print(f"PRs filtered out : {prs}")

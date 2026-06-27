@@ -1,7 +1,7 @@
 from datetime import date
 
-from solve_engine.config import SearchConfig, Settings, Thresholds
-from solve_engine.ingest.query import build_search_queries
+from triagent.config import SearchConfig, Settings, Thresholds
+from triagent.ingest.query import build_search_queries
 
 
 def _settings(labels: list[str]) -> Settings:

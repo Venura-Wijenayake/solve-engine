@@ -8,9 +8,9 @@ without exercising the LLM, the parser, or Postgres.
 
 from __future__ import annotations
 
-from solve_engine.classify.classifier import Classification
-from solve_engine.classify.llm import InvokeOutcome
-from solve_engine.score.run import IssueRow, PassResult, run_scoring_pass
+from triagent.classify.classifier import Classification
+from triagent.classify.llm import InvokeOutcome
+from triagent.score.run import IssueRow, PassResult, run_scoring_pass
 
 # A minimal valid classifier reply; parse_classification turns it into a Classification.
 _OK_JSON = (

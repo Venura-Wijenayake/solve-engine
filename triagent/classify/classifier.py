@@ -16,7 +16,7 @@ from typing import Any, cast
 
 from pydantic import BaseModel
 
-from solve_engine.models import Difficulty, IssueType
+from triagent.models import Difficulty, IssueType
 
 # Bumping this invalidates prior scores: the unscored anti-join keys on it, so a
 # new prompt version re-opens every issue for re-scoring.

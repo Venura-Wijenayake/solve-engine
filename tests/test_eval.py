@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from solve_engine.eval.golden import (
+from triagent.eval.golden import (
     GoldenRow,
     Prediction,
     filled_rows,
